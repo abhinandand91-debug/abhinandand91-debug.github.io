@@ -49,16 +49,19 @@ window.CONTENT = {
       title: "MPL Bingo", icon: "grid", dir: "work", source: "work",
       text: "Mobile Premier League: real-time multiplayer bingo for India and the US. Matchmaking for 100K+ matches a day at under 150 ms average latency, bot detection for anti-cheat, and tuning for low-end phones.",
       tags: ["Unity", "C#", "Multiplayer", "WebSockets", "Anti-cheat"],
+      links: [{ label: "MPL", href: "https://www.mpl.live/win-patti-skill-game" }],
     },
     {
       title: "Winpatti: Multiplayer 3 Card Poker", icon: "cards", dir: "work", source: "work",
       text: "Mobile Premier League: a server-authoritative game model players can't tamper with, sync that stays playable on slow networks, and a frame-rate lift from 28 to 52 FPS on mid-range Android.",
       tags: ["Unity", "C#", "Multiplayer", "Performance"],
+      links: [{ label: "PLAY ON MPL", href: "https://www.mpl.live/win-patti-skill-game" }],
     },
     {
       title: "MPL Unity SDK", icon: "plug", dir: "work", source: "work",
       text: "A shared SDK bridging native Android and iOS with Unity, used across MPL's Unity games. Designed its APIs so game teams could adopt it without reworking their code.",
       tags: ["Unity", "C#", "Java", "Android", "iOS", "SDK"],
+      links: [{ label: "MPL", href: "https://www.mpl.live/win-patti-skill-game" }],
     },
     {
       title: "Agapi Slot Game", icon: "cherry", dir: "work", source: "work",
@@ -69,11 +72,13 @@ window.CONTENT = {
       title: "Star Chef", icon: "chef", dir: "work", source: "work", img: "assets/star-chef.jpg",
       text: "99 Games: gameplay systems, UI and Spine animation for a live-service cooking game, with 3 years of LiveOps and faster asset loading.",
       tags: ["Unity", "C#", "Spine", "Firebase", "LiveOps"],
+      links: [{ label: "GOOGLE PLAY", href: "https://play.google.com/store/apps/details?id=com.NNGames.starchef_android" }],
     },
     {
       title: "Sheroes: Be the Biz Mogul", icon: "building", dir: "work", source: "work", img: "assets/sheroes.jpg", imgPos: "center top",
       text: "99 Games: a business-mogul simulation. Resource management, construction, character simulation and progression systems.",
       tags: ["Unity", "C#", "Simulation", "Mobile"],
+      links: [{ label: "GOOGLE PLAY", href: "https://play.google.com/store/apps/details?id=com.NN.games.sheroes.shopping.city.sims" }],
     },
     {
       title: "Dhoom 3: The Game", icon: "bike", dir: "work", source: "work", img: "assets/dhoom3.jpg", imgPos: "center 45%",

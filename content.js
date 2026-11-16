@@ -18,7 +18,7 @@ window.CONTENT = {
   ],
   langs: "EN_FLUENT / HI_NATIVE / MR_NATIVE / KN_CONVERSATIONAL",
   cv: "assets/cv.pdf",
-  photo: "", // set to "assets/profile.jpg" once the photo file is in assets/
+  photo: "assets/profile.jpg",
   email: "abhinandand91@gmail.com",
   links: [
     { label: "GitHub", value: "abhinandand91-debug", href: GH },

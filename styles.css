@@ -264,3 +264,8 @@ h1 { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 4.6vw
 .bless img { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; object-position: center 20%; padding: 4px; background: var(--bg); border: 1px solid rgba(245,200,107,.55); box-shadow: 0 0 0 4px rgba(245,200,107,.08), 0 0 28px rgba(245,200,107,.18); }
 .bless figcaption { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; color: #e6c98f; }
 @media (max-width: 640px) { .blessings { padding-inline: 16px; } .bless img { width: 92px; height: 92px; } }
+.hero-photo figcaption { white-space: nowrap; overflow: hidden; text-overflow: clip; font-size: 7px; letter-spacing: .1em; }
+.contact-body .c-row { grid-template-columns: 80px 1fr; row-gap: 8px; }
+.contact-body .c-row a.val { font-size: 14px; word-break: normal; overflow-wrap: anywhere; }
+.contact-body .c-row .btn { grid-column: 2; justify-self: start; }
+.contact-body .c-row > span:empty { display: none; }

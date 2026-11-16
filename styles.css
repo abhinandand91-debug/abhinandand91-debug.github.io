@@ -269,3 +269,6 @@ h1 { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 4.6vw
 .contact-body .c-row a.val { font-size: 14px; word-break: normal; overflow-wrap: anywhere; }
 .contact-body .c-row .btn { grid-column: 2; justify-self: start; }
 .contact-body .c-row > span:empty { display: none; }
+.tl h4 a { color: inherit; border-bottom: 1px solid transparent; transition: color .15s, border-color .15s; }
+.tl h4 a:hover, .tl h4 a:focus-visible { color: var(--accent); border-bottom-color: var(--accent); }
+.tl h4 .ext { font-family: var(--mono); font-size: 11px; color: var(--accent-dim); }

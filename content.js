@@ -200,11 +200,11 @@ window.CONTENT = {
 
   // Oldest first; the last entry is shown as current
   experience: [
-    { from: "11.2015", to: "08.2020", company: "99 Games", icon: "gamepad", role: "Game Developer → Senior Game Developer", place: "Udupi, India",
+    { from: "11.2015", to: "08.2020", company: "99 Games", link: "https://99games.in/", icon: "gamepad", role: "Game Developer → Senior Game Developer", place: "Udupi, India",
       points: ["Star Chef LiveOps for 3 years", "Editor tools used across projects", "Mentored junior developers"] },
     { from: "08.2020", to: "03.2022", company: "New Space Research", icon: "plane", role: "Autonomy Researcher", place: "Bangalore, India",
       points: ["Owned combat flight simulator architecture", "Enemy AI with Unity ML-Agents", "Drone simulation over UDP"] },
-    { from: "02.2022", to: "10.2025", company: "Mobile Premier League", icon: "users", role: "Senior Development Engineer III", place: "Bangalore, India",
+    { from: "02.2022", to: "10.2025", company: "Mobile Premier League", link: "https://www.mpl.live/", icon: "users", role: "Senior Development Engineer III", place: "Bangalore, India",
       points: ["100K+ matches/day under 150 ms", "Server-authoritative poker", "Unity SDK for native Android/iOS"] },
     { from: "12.2025", to: "07.2026", company: "Agapi", icon: "cherry", role: "Senior Game Developer", place: "Dubai, UAE",
       points: ["Slot game from concept to release", "Cocos Creator + TypeScript"] },

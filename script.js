@@ -139,7 +139,7 @@
     <div class="tl reveal ${i === exp.length - 1 ? "current" : ""}">
       <div class="tl-badge" title="${esc(x.company)}">${ICON(x.icon || "code", 26)}</div>
       <div class="tl-date">${esc(x.from)} — ${esc(x.to)}</div>
-      <h4>${esc(x.company)}</h4><p>${esc(x.role)}</p>
+      <h4>${x.link ? `<a href="${esc(x.link)}" target="_blank" rel="noopener">${esc(x.company)} <span class="ext">↗</span></a>` : esc(x.company)}</h4><p>${esc(x.role)}</p>
       ${x.place ? `<p class="tl-place">${esc(x.place)}</p>` : ""}
       ${x.points ? `<ul>${x.points.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}
     </div>`).join("") + `

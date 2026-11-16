@@ -41,24 +41,24 @@ window.CONTENT = {
   projects: [
     // ── Studio work (from the CV; no public links) ──
     {
-      title: "Combat Flight Simulator", icon: "plane", dir: "work", source: "work",
+      title: "Combat Flight Simulator at NRT", icon: "plane", dir: "work", source: "work",
       text: "New Space Research and Technologies: a 3D combat flight simulator used to train defence personnel. I owned the architecture; enemy aircraft AI was trained with Unity ML-Agents. Also built the programme's drone simulation, with low-latency UDP controls and LOD work for a steady frame rate.",
       tags: ["Unity", "C#", "ML-Agents", "UDP", "Simulation"],
     },
     {
-      title: "MPL Bingo", icon: "grid", dir: "work", source: "work",
+      title: "MPL Bingo", img: "assets/cover-mpl.jpg", icon: "grid", dir: "work", source: "work",
       text: "Mobile Premier League: real-time multiplayer bingo for India and the US. Matchmaking for 100K+ matches a day at under 150 ms average latency, bot detection for anti-cheat, and tuning for low-end phones.",
       tags: ["Unity", "C#", "Multiplayer", "WebSockets", "Anti-cheat"],
       links: [{ label: "MPL", href: "https://www.mpl.live/win-patti-skill-game" }],
     },
     {
-      title: "Winpatti: Multiplayer 3 Card Poker", icon: "cards", dir: "work", source: "work",
+      title: "MPL Winpatti", img: "assets/cover-mpl.jpg", icon: "cards", dir: "work", source: "work",
       text: "Mobile Premier League: a server-authoritative game model players can't tamper with, sync that stays playable on slow networks, and a frame-rate lift from 28 to 52 FPS on mid-range Android.",
       tags: ["Unity", "C#", "Multiplayer", "Performance"],
       links: [{ label: "PLAY ON MPL", href: "https://www.mpl.live/win-patti-skill-game" }],
     },
     {
-      title: "MPL Unity SDK", icon: "plug", dir: "work", source: "work",
+      title: "MPL Unity SDK", img: "assets/cover-mpl.jpg", icon: "plug", dir: "work", source: "work",
       text: "A shared SDK bridging native Android and iOS with Unity, used across MPL's Unity games. Designed its APIs so game teams could adopt it without reworking their code.",
       tags: ["Unity", "C#", "Java", "Android", "iOS", "SDK"],
       links: [{ label: "MPL", href: "https://www.mpl.live/win-patti-skill-game" }],
@@ -84,11 +84,6 @@ window.CONTENT = {
       title: "Dhoom 3: The Game", icon: "bike", dir: "work", source: "work", img: "assets/dhoom3.jpg", imgPos: "center 45%",
       text: "99 Games: the mobile game of the Dhoom 3 film, a bike-chase runner. Procedural track generation, object pooling and tuned difficulty curves.",
       tags: ["Unity", "C#", "Procedural", "Mobile"],
-    },
-    {
-      title: "Fruit Link & Bubble Shooter", icon: "bubbles", dir: "work", source: "work",
-      text: "99 Games: core gameplay, procedural levels and scoring, plus bots for balancing and hack detection. Also Editor tools used across the studio.",
-      tags: ["Unity", "C#", "Procedural", "Editor tools"],
     },
 
     // ── itch.io games ──

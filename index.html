@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Boot intro -->
+  <div id="boot" class="boot">
+    <div class="boot-frame">
+      <div class="boot-head"><span>PERSONNEL DATABASE</span><span>NODE: IN-01</span></div>
+      <div class="boot-status"><span class="dot"></span><span id="boot-msg">INITIALIZING SYSTEM...</span><span class="muted" id="boot-q">QUERY: #000000</span></div>
+      <div class="boot-search">
+        <label>SEARCH QUERY</label>
+        <div class="boot-input"><span id="boot-type"></span><span class="caret">_</span></div>
+      </div>
+      <pre id="boot-log" class="boot-log"></pre>
+    </div>
+    <div class="boot-skip">ENTER / SPACE / CLICK — SKIP</div>
+  </div>
+
+  <div class="bg-grid"></div>
+  <div class="scanlines"></div>
+
+  <header class="nav">
+    <a href="#profile" class="brand"><span id="nav-name"></span><b id="nav-role"></b></a>
+    <nav id="nav-links">
+      <a href="#profile"><i>01</i> PROFILE</a>
+      <a href="#projects"><i>02</i> PROJECTS</a>
+      <a href="#experience"><i>03</i> EXPERIENCE</a>
+      <a href="#stack"><i>04</i> STACK</a>
+      <a href="#education"><i>05</i> EDUCATION</a>
+      <a href="#contact"><i>06</i> CONTACT</a>
+    </nav>
+    <a class="btn btn-solid btn-sm cv-link" download>DOWNLOAD CV ↓</a>
+  </header>
+
+  <aside class="gauge" aria-hidden="true">
+    <span class="gauge-label">SYS_SCROLL</span>
+    <div class="gauge-bar"><div class="gauge-ticks"></div><div id="gauge-fill" class="gauge-fill"></div><span id="gauge-pct">000%</span></div>
+    <span id="gauge-sec" class="gauge-label">PROFILE</span>
+  </aside>
+
+  <main>
+    <section id="profile" class="hero">
+      <div class="hero-text">
+        <div class="eyebrow">PLAYER_PROFILE <span class="online"><span class="dot"></span> ONLINE</span></div>
+        <p class="hi">HI, I'M</p>
+        <h1 id="hero-name"></h1>
+        <p class="role"><span id="hero-role"></span><span class="caret">|</span></p>
+        <p class="tagline" id="hero-tagline"></p>
+        <p class="langs" id="hero-loc"></p>
+        <p class="langs" id="hero-langs"></p>
+        <div class="actions">
+          <a class="btn btn-solid cv-link" download>DOWNLOAD CV ↓</a>
+          <a class="btn" href="#projects">VIEW PROJECTS ▸</a>
+          <a class="btn btn-ghost" href="#contact">GET IN TOUCH ◌</a>
+        </div>
+      </div>
+      <div class="uplink frame">
+        <canvas id="uplink"></canvas>
+        <div class="uplink-hud"><span>UPLINK // LIVE</span><span id="fps">FPS 60</span></div>
+      </div>
+    </section>
+
+    <div class="stats" id="stats"></div>
+    <section class="directions" id="directions"></section>
+
+    <section id="projects">
+      <h2 class="sec-title"><i>02 // PROJECTS</i>PROJECTS</h2>
+      <div class="filters">
+        <div><p class="filter-label">PROJECT DIRECTIONS</p><div id="f-dir" class="chips"></div></div>
+        <div><p class="filter-label">SOURCE</p><div id="f-src" class="chips"></div></div>
+        <div><p class="filter-label">PROJECT TECHNOLOGIES</p><div id="f-tech" class="chips"></div></div>
+      </div>
+      <div id="project-grid" class="grid frame"></div>
+    </section>
+
+    <section id="experience">
+      <h2 class="sec-title"><i>03 // EXPERIENCE LOG</i>EXPERIENCE</h2>
+      <p class="sub">PAST · CURRENT · NEXT</p>
+      <div id="timeline" class="timeline"></div>
+    </section>
+
+    <section id="stack">
+      <h2 class="sec-title"><i>04 // TECH STACK</i>STACK</h2>
+      <div id="stack-grid" class="stack"></div>
+    </section>
+
+    <section id="education">
+      <h2 class="sec-title"><i>05 // EDUCATION</i>EDUCATION AND COURSES</h2>
+      <p class="sub">SYSTEMS TRAINING · COURSES · CERTIFICATIONS</p>
+      <div id="edu" class="edu"></div>
+    </section>
+
+    <section id="contact" class="contact frame">
+      <h2 class="sec-title"><i>06 // CONTACT CHANNEL</i>LET'S BUILD SOMETHING.</h2>
+      <div class="contact-rows" id="contact-rows"></div>
+      <a class="btn btn-solid cv-link" download>DOWNLOAD CV ↓</a>
+    </section>
+  </main>
+
+  <footer class="foot"><span id="foot"></span><span>END OF TRANSMISSION</span></footer>
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

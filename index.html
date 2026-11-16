@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="game.css" />
 </head>
 <body>
   <!-- Boot intro -->
@@ -35,9 +36,12 @@
       <a href="#experience"><i>03</i> EXPERIENCE</a>
       <a href="#stack"><i>04</i> STACK</a>
       <a href="#education"><i>05</i> EDUCATION</a>
-      <a href="#contact"><i>06</i> CONTACT</a>
+      <a href="#arcade"><i>06</i> ARCADE</a>
+      <a href="#contact"><i>07</i> CONTACT</a>
     </nav>
-    <a class="btn btn-solid btn-sm cv-link" download>DOWNLOAD CV ↓</a>
+    <button class="xp" id="xp" title="Your progress: open the quest log"><span id="xp-lv">LV 1</span><span class="xp-bar"><i id="xp-fill"></i></span><span id="xp-title" class="xp-title">VISITOR</span></button>
+    <button class="con-btn" id="con-btn" title="Open console (~)">›_</button>
+    <a class="btn btn-solid btn-sm cv-link" download>CV ↓</a>
   </header>
 
   <aside class="gauge" aria-hidden="true">
@@ -62,9 +66,17 @@
           <a class="btn btn-ghost" href="#contact">GET IN TOUCH ◌</a>
         </div>
       </div>
-      <div class="uplink frame">
+      <div class="uplink frame" id="uplink-box">
         <canvas id="uplink"></canvas>
-        <div class="uplink-hud"><span>UPLINK // LIVE</span><span id="fps">FPS 60</span></div>
+        <div class="uplink-hud"><span id="uplink-label">UPLINK // LIVE</span><span id="fps">FPS 60</span></div>
+        <div class="mg-overlay" id="mg-overlay">
+          <p class="mg-kicker">MINI-GAME // 20 SECONDS</p>
+          <h3>FIX THE FRAME DROPS</h3>
+          <p class="mg-help">Frame spikes scroll in from the right. Click or tap each one before it reaches the left edge to keep the game at 60 FPS.</p>
+          <div id="mg-result" class="mg-result"></div>
+          <button class="btn btn-solid" id="mg-play">▶ PLAY</button>
+          <p class="mg-best" id="mg-best"></p>
+        </div>
       </div>
     </section>
 
@@ -88,7 +100,9 @@
     </section>
 
     <section id="stack">
-      <h2 class="sec-title"><i>04 // TECH STACK</i>STACK</h2>
+      <h2 class="sec-title"><i>04 // TECH STACK</i>CHARACTER SHEET</h2>
+      <p class="sub">CLICK A SKILL TO INSPECT IT</p>
+      <div id="charsheet" class="charsheet frame"></div>
       <div id="stack-grid" class="stack"></div>
     </section>
 
@@ -98,16 +112,43 @@
       <div id="edu" class="edu"></div>
     </section>
 
+    <section id="arcade">
+      <h2 class="sec-title"><i>06 // ARCADE</i>INSERT COIN</h2>
+      <p class="sub">MY ITCH.IO GAMES · PLAYABLE RIGHT HERE</p>
+      <div class="cabinet frame">
+        <div class="cab-list" id="cab-list"></div>
+        <div class="cab-screen" id="cab-screen"></div>
+      </div>
+    </section>
+
     <section id="contact" class="contact frame">
-      <h2 class="sec-title"><i>06 // CONTACT CHANNEL</i>LET'S BUILD SOMETHING.</h2>
+      <h2 class="sec-title"><i>07 // CONTACT CHANNEL</i>LET'S BUILD SOMETHING.</h2>
       <div class="contact-rows" id="contact-rows"></div>
       <a class="btn btn-solid cv-link" download>DOWNLOAD CV ↓</a>
     </section>
   </main>
 
+  <!-- game layer -->
+  <button class="quest-btn" id="quest-btn"><span>◆ QUESTS</span> <b id="quest-count">0/4</b> <span class="muted">·</span> <b id="ach-count">0/15</b> 🏆</button>
+  <aside class="quest-panel" id="quest-panel" hidden>
+    <div class="qp-head"><span>QUEST LOG</span><button id="qp-close" aria-label="Close">✕</button></div>
+    <p class="qp-label">MAIN QUEST · RECRUIT ABHINANDAN</p>
+    <ul id="quest-list" class="quest-list"></ul>
+    <p class="qp-label">ACHIEVEMENTS</p>
+    <div id="ach-grid" class="ach-grid"></div>
+    <p class="qp-foot"><span>Tip: press <kbd>~</kbd> for the console.</span><button id="qp-reset">RESET PROGRESS</button></p>
+  </aside>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <div class="console" id="console" hidden>
+    <div class="con-head"><span>ABHI-OS TERMINAL v1.0</span><button id="con-close" aria-label="Close">✕</button></div>
+    <div class="con-out" id="con-out"></div>
+    <form class="con-in" id="con-form"><span>guest@portfolio:~$</span><input id="con-input" autocomplete="off" spellcheck="false" autocapitalize="off" aria-label="Console command" /></form>
+  </div>
+
   <footer class="foot"><span id="foot"></span><span>END OF TRANSMISSION</span></footer>
 
   <script src="content.js"></script>
   <script src="script.js"></script>
+  <script src="game.js"></script>
 </body>
 </html>

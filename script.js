@@ -188,52 +188,9 @@
   const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("shown"); io.unobserve(e.target); } }), { threshold: 0.12 });
   document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
-  /* ── uplink canvas: rotating wireframe + live frame graph ── */
-  const cv = $("#uplink");
-  const ctx = cv.getContext("2d");
-  const pts = [];
-  for (let i = 0; i < 120; i++) {
-    const u = Math.random() * Math.PI * 2, v = Math.acos(2 * Math.random() - 1);
-    pts.push([Math.sin(v) * Math.cos(u), Math.cos(v), Math.sin(v) * Math.sin(u)]);
-  }
-  const graph = new Array(90).fill(16.6);
-  let last = performance.now(), frames = 0, fpsT = last;
-  function draw(now) {
-    const dpr = devicePixelRatio || 1;
-    const w = cv.clientWidth, h = cv.clientHeight;
-    if (cv.width !== w * dpr) { cv.width = w * dpr; cv.height = h * dpr; }
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    ctx.clearRect(0, 0, w, h);
-    const dt = now - last; last = now; frames++;
-    if (now - fpsT > 500) { $("#fps").textContent = `FPS ${Math.round((frames * 1000) / (now - fpsT))}`; frames = 0; fpsT = now; }
-    graph.push(Math.min(dt, 40)); graph.shift();
-
-    // sphere
-    const a = now / 4000, cx = w / 2, cy = h * 0.42, R = Math.min(w, h) * 0.3;
-    const proj = pts.map(([x, y, z]) => {
-      const X = x * Math.cos(a) - z * Math.sin(a), Z = x * Math.sin(a) + z * Math.cos(a);
-      const Y = y * Math.cos(0.4) - Z * Math.sin(0.4), Z2 = y * Math.sin(0.4) + Z * Math.cos(0.4);
-      return [cx + X * R, cy + Y * R, Z2];
-    });
-    ctx.lineWidth = 0.5;
-    for (let i = 0; i < proj.length; i++) for (let j = i + 1; j < proj.length; j++) {
-      const dx = proj[i][0] - proj[j][0], dy = proj[i][1] - proj[j][1], d = dx * dx + dy * dy;
-      if (d < (R * 0.32) ** 2) {
-        ctx.strokeStyle = `rgba(159,240,240,${0.18 * (1 - d / (R * 0.32) ** 2) * (1.3 + (proj[i][2] + proj[j][2]) / 2) / 2})`;
-        ctx.beginPath(); ctx.moveTo(proj[i][0], proj[i][1]); ctx.lineTo(proj[j][0], proj[j][1]); ctx.stroke();
-      }
-    }
-    for (const [x, y, z] of proj) { ctx.fillStyle = `rgba(159,240,240,${0.35 + z * 0.35})`; ctx.fillRect(x - 1, y - 1, 2, 2); }
-
-    // frame-time graph
-    const gx = 16, gw = w - 32, gh = h * 0.16, gy = h - 40 - gh;
-    ctx.strokeStyle = "rgba(125,141,153,.25)"; ctx.setLineDash([3, 4]);
-    ctx.beginPath(); ctx.moveTo(gx, gy + gh - (16.6 / 40) * gh); ctx.lineTo(gx + gw, gy + gh - (16.6 / 40) * gh); ctx.stroke();
-    ctx.setLineDash([]); ctx.strokeStyle = "#6ee7a8"; ctx.lineWidth = 1.2; ctx.beginPath();
-    graph.forEach((v, i) => { const x = gx + (i / (graph.length - 1)) * gw, y = gy + gh - (v / 40) * gh; i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); });
-    ctx.stroke();
-    ctx.fillStyle = "rgba(125,141,153,.8)"; ctx.font = "9px JetBrains Mono, monospace"; ctx.fillText("FRAME TIME (ms)", gx, gy - 6);
-    requestAnimationFrame(draw);
-  }
-  requestAnimationFrame(draw);
+  /* ── hooks for game.js ── */
+  window.PORTFOLIO = {
+    state,
+    setFilter(f) { Object.assign(state, { dir: "all", tech: "all", src: "all" }, f); renderProjects(); },
+  };
 })();

@@ -212,4 +212,30 @@ window.CONTENT = {
     { year: "2015", title: "Diploma in Embedded C / C++", place: "Bangalore", details: "Embedded C and C++ programming, 2014–2015." },
     { year: "2014", title: "B.E., Electronics and Telecommunication", place: "Shivaji University (Bharati Vidyapeeth College of Engineering, Kolhapur)", details: "Bachelor of Engineering, graduated 2014." },
   ],
+
+  // Character sheet in the STACK section: bars are years of hands-on experience (from the CV)
+  character: {
+    cls: "Senior Unity Developer",
+    level: 11, // years since starting in Unity (2015)
+    attrs: [
+      { name: "Unity & C#", years: 11 },
+      { name: "Mobile games", years: 11 },
+      { name: "Editor tools", years: 11 },
+      { name: "Real-time multiplayer", years: 4 },
+      { name: "Native SDK (Android / iOS)", years: 4 },
+      { name: "3D simulation & ML-Agents", years: 2 },
+      { name: "Cocos Creator / TypeScript", years: 1 },
+      { name: "AI coding agents", years: 1 },
+    ],
+  },
+
+  // ARCADE: itch.io browser builds. `upload` is the itch upload id used for embedding.
+  arcade: [
+    { title: "Neon Drop", genre: "Rhythm brick-breaker", upload: "20053216", img: "assets/neon-drop.jpg", page: ITCH + "neon-drop" },
+    { title: "Bubble Pip", genre: "Bubble shooter", upload: "20103182", img: "assets/bubble-pip.jpg", page: ITCH + "bubble-pip" },
+    { title: "Onet Connect", genre: "Tile puzzle", upload: "20053334", img: "assets/onet-connect.jpg", page: ITCH + "onet-connect" },
+    { title: "Mega Merge 2048", genre: "Merge puzzle", upload: "20052362", img: "assets/mega-merge-2048.jpg", page: ITCH + "mega-merge-2048" },
+    { title: "Ultimate Bingo", genre: "Timed bingo", upload: "20053120", img: "assets/ultimate-bingo.jpg", page: ITCH + "ultimate-bingo" },
+    { title: "Teen Patti Poker Royale", genre: "Card game", upload: "20127799", img: "assets/teen-patti-royale.jpg", page: ITCH + "teen-patti-royale" },
+  ],
 };

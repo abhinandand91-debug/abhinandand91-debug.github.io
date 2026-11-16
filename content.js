@@ -65,7 +65,7 @@ window.CONTENT = {
       tags: ["Cocos Creator", "TypeScript", "Android"],
     },
     {
-      title: "Star Chef", dir: "work", source: "work",
+      title: "Star Chef", dir: "work", source: "work", img: "assets/star-chef.jpg",
       text: "99 Games: gameplay systems, UI and Spine animation for a live-service cooking game, with 3 years of LiveOps and faster asset loading.",
       tags: ["Unity", "C#", "Spine", "Firebase", "LiveOps"],
     },

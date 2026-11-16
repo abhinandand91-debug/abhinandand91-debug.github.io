@@ -70,8 +70,13 @@ window.CONTENT = {
       tags: ["Unity", "C#", "Spine", "Firebase", "LiveOps"],
     },
     {
-      title: "Mogul, Dhoom 3, Fruit Link & Bubble Shooter", dir: "work", source: "work",
-      text: "99 Games: resource management and character simulation (Mogul), procedural track generation (Dhoom 3), and procedural levels with balancing bots (Fruit Link, Bubble Shooter). Plus Editor tools used across the studio.",
+      title: "Sheroes: Be the Biz Mogul", dir: "work", source: "work", // TODO: add img: "assets/sheroes.jpg" once the file is saved there
+      text: "99 Games: a business-mogul simulation. Resource management, construction, character simulation and progression systems.",
+      tags: ["Unity", "C#", "Simulation", "Mobile"],
+    },
+    {
+      title: "Dhoom 3, Fruit Link & Bubble Shooter", dir: "work", source: "work",
+      text: "99 Games: procedural track generation, object pooling and difficulty curves (Dhoom 3), and procedural levels, scoring and balancing bots with hack detection (Fruit Link, Bubble Shooter). Plus Editor tools used across the studio.",
       tags: ["Unity", "C#", "Procedural", "Editor tools"],
     },
 

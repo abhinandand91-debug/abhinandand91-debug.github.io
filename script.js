@@ -104,7 +104,7 @@
     const list = C.projects.filter((p) => (state.dir === "all" || p.dir === state.dir) && (state.src === "all" || p.source === state.src) && (state.tech === "all" || p.tags.includes(state.tech)));
     $("#project-grid").innerHTML = list.length ? list.map((p, i) => `
       <article class="card" style="animation-delay:${i * 60}ms">
-        ${p.img ? `<div class="card-img" style="background-image:url('${esc(p.img)}')">` : `<div class="card-img ph" data-ph="${p.source === "private" ? "SOURCE // CLASSIFIED" : p.source === "work" ? "CLIENT WORK // NDA" : "IMAGE // PENDING"}">${esc(initials(p.title))}`}
+        ${p.img ? `<div class="card-img" style="background-image:url('${esc(p.img)}')${p.imgPos ? `;background-position:${esc(p.imgPos)}` : ""}">` : `<div class="card-img ph" data-ph="${p.source === "private" ? "SOURCE // CLASSIFIED" : p.source === "work" ? "CLIENT WORK // NDA" : "IMAGE // PENDING"}">${esc(initials(p.title))}`}
           ${p.source ? `<span class="src src-${esc(p.source)}">${p.source === "private" ? "🔒 " : ""}${esc(SOURCES[p.source] || p.source)}</span>` : ""}
         </div>
         <div class="card-body">

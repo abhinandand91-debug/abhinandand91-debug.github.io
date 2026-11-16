@@ -70,13 +70,18 @@ window.CONTENT = {
       tags: ["Unity", "C#", "Spine", "Firebase", "LiveOps"],
     },
     {
-      title: "Sheroes: Be the Biz Mogul", dir: "work", source: "work", img: "assets/sheroes.jpg",
+      title: "Sheroes: Be the Biz Mogul", dir: "work", source: "work", img: "assets/sheroes.jpg", imgPos: "center top",
       text: "99 Games: a business-mogul simulation. Resource management, construction, character simulation and progression systems.",
       tags: ["Unity", "C#", "Simulation", "Mobile"],
     },
     {
-      title: "Dhoom 3, Fruit Link & Bubble Shooter", dir: "work", source: "work",
-      text: "99 Games: procedural track generation, object pooling and difficulty curves (Dhoom 3), and procedural levels, scoring and balancing bots with hack detection (Fruit Link, Bubble Shooter). Plus Editor tools used across the studio.",
+      title: "Dhoom 3: The Game", dir: "work", source: "work", img: "assets/dhoom3.jpg", imgPos: "center 45%",
+      text: "99 Games: the mobile game of the Dhoom 3 film, a bike-chase runner. Procedural track generation, object pooling and tuned difficulty curves.",
+      tags: ["Unity", "C#", "Procedural", "Mobile"],
+    },
+    {
+      title: "Fruit Link & Bubble Shooter", dir: "work", source: "work",
+      text: "99 Games: core gameplay, procedural levels and scoring, plus bots for balancing and hack detection. Also Editor tools used across the studio.",
       tags: ["Unity", "C#", "Procedural", "Editor tools"],
     },
 

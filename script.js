@@ -48,15 +48,15 @@
           if (booted) return;
           if (j >= lines.length) {
             $("#boot-msg").textContent = "ACCESS GRANTED";
-            return setTimeout(finishBoot, 600);
+            return setTimeout(finishBoot, 1400);
           }
           const [a, b] = lines[j++];
           log.innerHTML += `${esc(a)} <span class="ok">${esc(b)}</span>\n`;
-          setTimeout(next, 320);
+          setTimeout(next, 650);
         };
-        setTimeout(next, 300);
+        setTimeout(next, 700);
       }
-    }, 55);
+    }, 110);
   };
   // show intro once per browser session
   let seen = false;
@@ -72,7 +72,7 @@
   function typeRole() {
     const el = $("#hero-role");
     let i = 0;
-    const t = setInterval(() => { el.textContent = C.role.slice(0, ++i); if (i >= C.role.length) clearInterval(t); }, 45);
+    const t = setInterval(() => { el.textContent = C.role.slice(0, ++i); if (i >= C.role.length) clearInterval(t); }, 85);
   }
 
   /* ── directions ── */

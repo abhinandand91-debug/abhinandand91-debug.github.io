@@ -219,3 +219,27 @@ h1 { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 4.6vw
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ── icons + profile photo ── */
+.ico { display: block; }
+.card-img.ph { color: var(--accent-dim); }
+.card-img.ph .ico { opacity: .75; filter: drop-shadow(0 0 10px rgba(159,240,240,.25)); }
+.tl-badge .ico { color: var(--accent); }
+.cs-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cs-avatar .ico { color: var(--accent); }
+.hero-id { display: flex; align-items: flex-end; gap: 20px; margin-top: 28px; }
+.hero-id .hi { margin-top: 0; }
+.hero-photo, .contact-photo { margin: 0; position: relative; }
+.hero-photo { width: 112px; padding: 5px; background: var(--bg2); }
+.hero-photo img, .contact-photo img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; filter: saturate(.9) contrast(1.03); }
+.hero-photo figcaption, .contact-photo figcaption { font-family: var(--mono); font-size: 8px; letter-spacing: .14em; color: var(--muted); margin-top: 5px; }
+.hero-photo::selection { background: none; }
+.contact-body { display: grid; grid-template-columns: 180px 1fr; gap: 24px; align-items: start; margin: 28px 0; }
+.contact-body .contact-rows { margin: 0; }
+.contact-body:has(.contact-photo[hidden]) { grid-template-columns: 1fr; }
+.contact-photo { border: 1px solid var(--line2); padding: 6px; background: var(--bg2); }
+@media (max-width: 640px) {
+  .hero-photo { width: 84px; }
+  .contact-body { grid-template-columns: 1fr; }
+  .contact-photo { width: 140px; }
+}

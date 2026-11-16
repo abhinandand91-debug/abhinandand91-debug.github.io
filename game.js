@@ -315,7 +315,7 @@
     const initials = C.name.split(/\s+/).map((w) => w[0]).join("").slice(0, 2);
     $("#charsheet").innerHTML = `
       <div class="cs-id">
-        <div class="cs-avatar">${esc(initials)}</div>
+        <div class="cs-avatar">${C.photo ? `<img src="${esc(C.photo)}" alt="${esc(C.name)}" />` : ICON("user", 44)}</div>
         <span>NAME <b>${esc(C.name)}</b></span>
         <span>CLASS <b>${esc(ch.cls)}</b></span>
         <span>LEVEL <span class="cs-lv">${esc(ch.level)}</span></span>

@@ -18,6 +18,7 @@ window.CONTENT = {
   ],
   langs: "EN_FLUENT / HI_NATIVE / MR_NATIVE / KN_CONVERSATIONAL",
   cv: "assets/cv.pdf",
+  photo: "", // set to "assets/profile.jpg" once the photo file is in assets/
   email: "abhinandand91@gmail.com",
   links: [
     { label: "GitHub", value: "abhinandand91-debug", href: GH },
@@ -40,47 +41,47 @@ window.CONTENT = {
   projects: [
     // ── Studio work (from the CV; no public links) ──
     {
-      title: "Combat Flight Simulator", dir: "work", source: "work",
+      title: "Combat Flight Simulator", icon: "plane", dir: "work", source: "work",
       text: "New Space Research and Technologies: a 3D combat flight simulator used to train defence personnel. I owned the architecture; enemy aircraft AI was trained with Unity ML-Agents. Also built the programme's drone simulation, with low-latency UDP controls and LOD work for a steady frame rate.",
       tags: ["Unity", "C#", "ML-Agents", "UDP", "Simulation"],
     },
     {
-      title: "MPL Bingo", dir: "work", source: "work",
+      title: "MPL Bingo", icon: "grid", dir: "work", source: "work",
       text: "Mobile Premier League: real-time multiplayer bingo for India and the US. Matchmaking for 100K+ matches a day at under 150 ms average latency, bot detection for anti-cheat, and tuning for low-end phones.",
       tags: ["Unity", "C#", "Multiplayer", "WebSockets", "Anti-cheat"],
     },
     {
-      title: "Winpatti: Multiplayer 3 Card Poker", dir: "work", source: "work",
+      title: "Winpatti: Multiplayer 3 Card Poker", icon: "cards", dir: "work", source: "work",
       text: "Mobile Premier League: a server-authoritative game model players can't tamper with, sync that stays playable on slow networks, and a frame-rate lift from 28 to 52 FPS on mid-range Android.",
       tags: ["Unity", "C#", "Multiplayer", "Performance"],
     },
     {
-      title: "MPL Unity SDK", dir: "work", source: "work",
+      title: "MPL Unity SDK", icon: "plug", dir: "work", source: "work",
       text: "A shared SDK bridging native Android and iOS with Unity, used across MPL's Unity games. Designed its APIs so game teams could adopt it without reworking their code.",
       tags: ["Unity", "C#", "Java", "Android", "iOS", "SDK"],
     },
     {
-      title: "Agapi Slot Game", dir: "work", source: "work",
+      title: "Agapi Slot Game", icon: "cherry", dir: "work", source: "work",
       text: "Agapi, Dubai: a mobile slot game delivered from concept to release on a tight deadline in Cocos Creator, an engine learned on the job. Reels, win evaluation, free spins, bonus features and a modular framework for the team.",
       tags: ["Cocos Creator", "TypeScript", "Android"],
     },
     {
-      title: "Star Chef", dir: "work", source: "work", img: "assets/star-chef.jpg",
+      title: "Star Chef", icon: "chef", dir: "work", source: "work", img: "assets/star-chef.jpg",
       text: "99 Games: gameplay systems, UI and Spine animation for a live-service cooking game, with 3 years of LiveOps and faster asset loading.",
       tags: ["Unity", "C#", "Spine", "Firebase", "LiveOps"],
     },
     {
-      title: "Sheroes: Be the Biz Mogul", dir: "work", source: "work", img: "assets/sheroes.jpg", imgPos: "center top",
+      title: "Sheroes: Be the Biz Mogul", icon: "building", dir: "work", source: "work", img: "assets/sheroes.jpg", imgPos: "center top",
       text: "99 Games: a business-mogul simulation. Resource management, construction, character simulation and progression systems.",
       tags: ["Unity", "C#", "Simulation", "Mobile"],
     },
     {
-      title: "Dhoom 3: The Game", dir: "work", source: "work", img: "assets/dhoom3.jpg", imgPos: "center 45%",
+      title: "Dhoom 3: The Game", icon: "bike", dir: "work", source: "work", img: "assets/dhoom3.jpg", imgPos: "center 45%",
       text: "99 Games: the mobile game of the Dhoom 3 film, a bike-chase runner. Procedural track generation, object pooling and tuned difficulty curves.",
       tags: ["Unity", "C#", "Procedural", "Mobile"],
     },
     {
-      title: "Fruit Link & Bubble Shooter", dir: "work", source: "work",
+      title: "Fruit Link & Bubble Shooter", icon: "bubbles", dir: "work", source: "work",
       text: "99 Games: core gameplay, procedural levels and scoring, plus bots for balancing and hack detection. Also Editor tools used across the studio.",
       tags: ["Unity", "C#", "Procedural", "Editor tools"],
     },
@@ -134,32 +135,32 @@ window.CONTENT = {
       links: [], // TODO: Asset Store link once live
     },
     {
-      title: "Unity Perf Monitor", dir: "tools", source: "github",
+      title: "Unity Perf Monitor", icon: "chart", dir: "tools", source: "github",
       text: "An in-game performance overlay that names the bottleneck (GPU, main thread, render thread, memory) and fails CI when a build gets slower.",
       tags: ["Unity", "C#", "Profiling", "CI"],
       links: [{ label: "GITHUB", href: GH + "unity-perf-monitor" }],
     },
     {
-      title: "LiveOpsKit", dir: "tools", source: "github",
+      title: "LiveOpsKit", icon: "clock", dir: "tools", source: "github",
       text: "Unity Editor tools that stop LiveOps and release mistakes: a pre-build release checker, a LiveOps config validator and a time-travel clock.",
       tags: ["Unity", "C#", "Editor tools", "UPM"],
       links: [{ label: "GITHUB", href: GH + "LiveOpsKit" }],
     },
     {
-      title: "AddrKit", dir: "tools", source: "github",
+      title: "AddrKit", icon: "box", dir: "tools", source: "github",
       text: "A friendly toolkit on top of Unity Addressables: one-line loading, owner-based auto release, generated keys, folder rules, an analyzer and debug tools.",
       tags: ["Unity", "C#", "Addressables", "UPM"],
       links: [{ label: "GITHUB", href: GH + "AddrKit" }],
     },
     {
-      title: "Serialized Field Guard", dir: "tools", source: "private",
+      title: "Serialized Field Guard", icon: "shield", dir: "tools", source: "private",
       text: "Detects renamed serialized fields, counts the assets they would break, adds FormerlySerializedAs automatically and ships a git pre-commit hook.",
       tags: ["Unity", "C#", "Editor tools", "Git"],
     },
 
     // ── More games and prototypes ──
     {
-      title: "Slot Machines (3×5 and 3×3)", dir: "games", source: "github",
+      title: "Slot Machines (3×5 and 3×3)", icon: "cherry", dir: "games", source: "github",
       text: "Classic 20-payline slot machines in Unity 6 with clean, SOLID C#, code-generated placeholder art and sound, and tests. Also ported to Cocos Creator 3.8 in TypeScript.",
       tags: ["Unity", "C#", "Cocos Creator", "TypeScript", "Tests"],
       links: [
@@ -168,25 +169,25 @@ window.CONTENT = {
       ],
     },
     {
-      title: "1947", dir: "games", source: "github",
+      title: "1947", icon: "rocket", dir: "games", source: "github",
       text: "A 2D vertical space shooter built with Unity.",
       tags: ["Unity", "C#", "2D"],
       links: [{ label: "GITHUB", href: GH + "1947Game" }],
     },
     {
-      title: "ToneBlaster", dir: "prototypes", source: "private",
+      title: "ToneBlaster", icon: "music", dir: "prototypes", source: "private",
       text: "A voice-controlled artillery prototype: players hum musical notes to aim and fire. Each note maps to a ground zone, and damage depends on landing precision.",
       tags: ["Unity", "C#", "Audio", "Pitch detection"],
     },
     {
-      title: "The Last Light", dir: "prototypes", source: "private",
+      title: "The Last Light", icon: "flame", dir: "prototypes", source: "private",
       text: "Colony Memory: a vertical slice built in Unity.", // TODO: one more sentence on the genre and what you built
       tags: ["Unity", "C#"],
     },
 
     // ── Apps ──
     {
-      title: "ChargeMate", dir: "prototypes", source: "private",
+      title: "ChargeMate", icon: "bolt", dir: "prototypes", source: "private",
       text: "An EV charging app MVP with its own backend.", // TODO: check the wording, and remove if this is client work under NDA
       tags: ["Kotlin", "Flutter", "TypeScript", "Mobile"],
     },
@@ -194,15 +195,15 @@ window.CONTENT = {
 
   // Oldest first; the last entry is shown as current
   experience: [
-    { from: "11.2015", to: "08.2020", company: "99 Games", role: "Game Developer → Senior Game Developer", place: "Udupi, India",
+    { from: "11.2015", to: "08.2020", company: "99 Games", icon: "gamepad", role: "Game Developer → Senior Game Developer", place: "Udupi, India",
       points: ["Star Chef LiveOps for 3 years", "Editor tools used across projects", "Mentored junior developers"] },
-    { from: "08.2020", to: "03.2022", company: "New Space Research", role: "Autonomy Researcher", place: "Bangalore, India",
+    { from: "08.2020", to: "03.2022", company: "New Space Research", icon: "plane", role: "Autonomy Researcher", place: "Bangalore, India",
       points: ["Owned combat flight simulator architecture", "Enemy AI with Unity ML-Agents", "Drone simulation over UDP"] },
-    { from: "02.2022", to: "10.2025", company: "Mobile Premier League", role: "Senior Development Engineer III", place: "Bangalore, India",
+    { from: "02.2022", to: "10.2025", company: "Mobile Premier League", icon: "users", role: "Senior Development Engineer III", place: "Bangalore, India",
       points: ["100K+ matches/day under 150 ms", "Server-authoritative poker", "Unity SDK for native Android/iOS"] },
-    { from: "12.2025", to: "07.2026", company: "Agapi", role: "Senior Game Developer", place: "Dubai, UAE",
+    { from: "12.2025", to: "07.2026", company: "Agapi", icon: "cherry", role: "Senior Game Developer", place: "Dubai, UAE",
       points: ["Slot game from concept to release", "Cocos Creator + TypeScript"] },
-    { from: "2026", to: "PRESENT", company: "Independent", role: "Agentic-first games & Unity tools", place: "Remote",
+    { from: "2026", to: "PRESENT", company: "Independent", icon: "rocket", role: "Agentic-first games & Unity tools", place: "Remote",
       points: ["6 games on itch.io", "Frame Guru for the Asset Store"] },
   ],
 

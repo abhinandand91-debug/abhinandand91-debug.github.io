@@ -54,7 +54,10 @@
     <section id="profile" class="hero">
       <div class="hero-text">
         <div class="eyebrow">PLAYER_PROFILE <span class="online"><span class="dot"></span> ONLINE</span></div>
-        <p class="hi">HI, I'M</p>
+        <div class="hero-id">
+          <figure class="hero-photo frame" id="hero-photo" hidden><img alt="" /><figcaption>PROFILE_IMAGE // 001</figcaption></figure>
+          <p class="hi">HI, I'M</p>
+        </div>
         <h1 id="hero-name"></h1>
         <p class="role"><span id="hero-role"></span><span class="caret">|</span></p>
         <p class="tagline" id="hero-tagline"></p>
@@ -123,7 +126,10 @@
 
     <section id="contact" class="contact frame">
       <h2 class="sec-title"><i>07 // CONTACT CHANNEL</i>LET'S BUILD SOMETHING.</h2>
-      <div class="contact-rows" id="contact-rows"></div>
+      <div class="contact-body">
+        <figure class="contact-photo" id="contact-photo" hidden><img alt="" /><figcaption>PROFILE_IMAGE // 001</figcaption></figure>
+        <div class="contact-rows" id="contact-rows"></div>
+      </div>
       <a class="btn btn-solid cv-link" download>DOWNLOAD CV ↓</a>
     </section>
   </main>
@@ -148,6 +154,7 @@
   <footer class="foot"><span id="foot"></span><span>END OF TRANSMISSION</span></footer>
 
   <script src="content.js"></script>
+  <script src="icons.js"></script>
   <script src="script.js"></script>
   <script src="game.js"></script>
 </body>

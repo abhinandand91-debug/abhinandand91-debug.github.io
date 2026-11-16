@@ -2,6 +2,7 @@
   const C = window.CONTENT;
   const $ = (s) => document.querySelector(s);
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const DIR_ICON = { work: "gamepad", games: "gamepad", tools: "code", prototypes: "flame" };
   const initials = (s) => s.split(/\s+/).map((w) => w[0]).join("").slice(0, 3).toUpperCase();
 
   /* ── fill static bits ── */
@@ -15,6 +16,12 @@
   $("#stats").innerHTML = (C.stats || []).map((s) => `<div class="stat"><b>${esc(s.n)}</b><span>${esc(s.l)}</span></div>`).join("");
   $("#foot").textContent = `© ${new Date().getFullYear()} ${C.name.toUpperCase()}`;
   document.querySelectorAll(".cv-link").forEach((a) => (a.href = C.cv));
+  if (C.photo) ["#hero-photo", "#contact-photo"].forEach((id) => {
+    const f = $(id), img = f.querySelector("img");
+    img.src = C.photo; img.alt = C.name;
+    img.onerror = () => (f.hidden = true);
+    f.hidden = false;
+  });
 
   /* ── boot intro ── */
   const boot = $("#boot");
@@ -104,7 +111,7 @@
     const list = C.projects.filter((p) => (state.dir === "all" || p.dir === state.dir) && (state.src === "all" || p.source === state.src) && (state.tech === "all" || p.tags.includes(state.tech)));
     $("#project-grid").innerHTML = list.length ? list.map((p, i) => `
       <article class="card" style="animation-delay:${i * 60}ms">
-        ${p.img ? `<div class="card-img" style="background-image:url('${esc(p.img)}')${p.imgPos ? `;background-position:${esc(p.imgPos)}` : ""}">` : `<div class="card-img ph" data-ph="${p.source === "private" ? "SOURCE // CLASSIFIED" : p.source === "work" ? "CLIENT WORK // NDA" : "IMAGE // PENDING"}">${esc(initials(p.title))}`}
+        ${p.img ? `<div class="card-img" style="background-image:url('${esc(p.img)}')${p.imgPos ? `;background-position:${esc(p.imgPos)}` : ""}">` : `<div class="card-img ph" data-ph="${p.source === "private" ? "SOURCE // CLASSIFIED" : p.source === "work" ? "CLIENT WORK // NDA" : "IMAGE // PENDING"}">${ICON(p.icon || DIR_ICON[p.dir] || "code", 56)}`}
           ${p.source ? `<span class="src src-${esc(p.source)}">${p.source === "private" ? "🔒 " : ""}${esc(SOURCES[p.source] || p.source)}</span>` : ""}
         </div>
         <div class="card-body">
@@ -130,13 +137,13 @@
   const exp = C.experience;
   $("#timeline").innerHTML = exp.map((x, i) => `
     <div class="tl reveal ${i === exp.length - 1 ? "current" : ""}">
-      <div class="tl-badge">${esc(initials(x.company))}</div>
+      <div class="tl-badge" title="${esc(x.company)}">${ICON(x.icon || "code", 26)}</div>
       <div class="tl-date">${esc(x.from)} — ${esc(x.to)}</div>
       <h4>${esc(x.company)}</h4><p>${esc(x.role)}</p>
       ${x.place ? `<p class="tl-place">${esc(x.place)}</p>` : ""}
       ${x.points ? `<ul>${x.points.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}
     </div>`).join("") + `
-    <div class="tl next reveal"><div class="tl-badge">NEXT</div><div class="tl-date">???</div><h4>New Project?</h4><a href="#contact">HIRE ME ↗</a></div>`;
+    <div class="tl next reveal"><div class="tl-badge" title="Next">${ICON("plus", 26)}</div><div class="tl-date">???</div><h4>New Project?</h4><a href="#contact">HIRE ME ↗</a></div>`;
 
   /* ── stack ── */
   $("#stack-grid").innerHTML = Object.entries(C.stack).map(([g, items]) => `

@@ -70,7 +70,7 @@ window.CONTENT = {
       tags: ["Unity", "C#", "Spine", "Firebase", "LiveOps"],
     },
     {
-      title: "Sheroes: Be the Biz Mogul", dir: "work", source: "work", // TODO: add img: "assets/sheroes.jpg" once the file is saved there
+      title: "Sheroes: Be the Biz Mogul", dir: "work", source: "work", img: "assets/sheroes.jpg",
       text: "99 Games: a business-mogul simulation. Resource management, construction, character simulation and progression systems.",
       tags: ["Unity", "C#", "Simulation", "Mobile"],
     },

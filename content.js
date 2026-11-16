@@ -8,8 +8,8 @@ const ITCH = "https://xstonecold.itch.io/";
 window.CONTENT = {
   name: "Abhinandan Dharmadhikari",
   role: "Senior Unity Developer",
-  tagline: "10+ years in Unity and C#: real-time 3D simulation for defence training, real-time multiplayer at scale, and Unity tools. Worked in Dubai 2025–26, open to relocating to the UAE.",
-  location: "Sangli, Maharashtra, India · Open to UAE relocation",
+  tagline: "Senior Unity engineer with 10+ years in C#. I architected a combat flight simulator for defence training, built real-time multiplayer at Mobile Premier League and shipped 9+ mobile games. Now I build Unity tools that make games run faster. Worked in India and Dubai; open to relocating anywhere.",
+  location: "Sangli, India · Open to relocation worldwide · Available immediately",
   stats: [
     { n: "10+", l: "YEARS IN UNITY & C#" },
     { n: "9+", l: "MOBILE GAMES SHIPPED" },

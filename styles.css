@@ -254,3 +254,13 @@ h1 { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 4.6vw
 .talk-place { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-bottom: 8px; }
 .talk p:last-child { color: #aab6bf; font-size: 14px; }
 @media (max-width: 760px) { .talks { grid-template-columns: 1fr; } }
+
+/* ── blessings ── */
+.blessings { max-width: 1180px; margin: 0 auto; padding: 40px 80px 10px 32px; text-align: center; }
+.blessings[hidden] { display: none; }
+.bless-label { font-family: var(--mono); font-size: 10px; letter-spacing: .25em; color: #c9a86a; margin-bottom: 18px; }
+.bless-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 36px; }
+.bless { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.bless img { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; object-position: center 20%; padding: 4px; background: var(--bg); border: 1px solid rgba(245,200,107,.55); box-shadow: 0 0 0 4px rgba(245,200,107,.08), 0 0 28px rgba(245,200,107,.18); }
+.bless figcaption { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; color: #e6c98f; }
+@media (max-width: 640px) { .blessings { padding-inline: 16px; } .bless img { width: 92px; height: 92px; } }

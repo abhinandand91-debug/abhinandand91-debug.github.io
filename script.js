@@ -145,6 +145,14 @@
     </div>`).join("") + `
     <div class="tl next reveal"><div class="tl-badge" title="Next">${ICON("plus", 26)}</div><div class="tl-date">???</div><h4>New Project?</h4><a href="#contact">HIRE ME ↗</a></div>`;
 
+  /* ── blessings ── */
+  const bless = (C.blessings || []).filter((b) => b.img);
+  if (bless.length) {
+    $("#bless-row").innerHTML = bless.map((b) => `
+      <figure class="bless"><img src="${esc(b.img)}" alt="${esc(b.name || "")}" loading="lazy" />${b.name ? `<figcaption>${esc(b.name)}</figcaption>` : ""}</figure>`).join("");
+    $("#blessings").hidden = false;
+  }
+
   /* ── talks ── */
   $("#talks").innerHTML = (C.talks || []).map((t) => `
     <article class="talk reveal">

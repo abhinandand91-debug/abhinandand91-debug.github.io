@@ -216,10 +216,16 @@ window.CONTENT = {
     "Architecture & Delivery": ["SOLID & design patterns", "Event-driven systems", "ScriptableObjects", "Editor tools", "Git", "Jenkins", "JIRA / Scrum", "LiveOps", "AI coding agents"],
   },
 
+  // Talks and teaching given to other game developers and students
+  talks: [
+    { year: "2018", kind: "CONFERENCE TALK", icon: "mic", title: "Game Programming Design Patterns", place: "IGDC 2018, Hyderabad",
+      text: "Speaker at the India Game Developer Conference: how design patterns make game code easier to change, for working game developers." },
+    { year: "2018–19", kind: "GUEST LECTURER", icon: "school", title: "Game development for engineering students", place: "NITTE College and MIT Manipal",
+      text: "Guest lectures introducing engineering students to game development and how games are built." },
+  ],
+
   education: [
     { year: "2020", title: "AI / ML and Game Development", place: "Bangalore", details: "Course in machine learning and game development, applied right after in ML-Agents work on the combat flight simulator." },
-    { year: "2018–19", title: "Guest Lecturer", place: "NITTE College and MIT Manipal", details: "Guest lectures on game development for engineering students." },
-    { year: "2018", title: "Speaker: \"Game Programming Design Patterns\"", place: "IGDC 2018, Hyderabad", details: "Talk at the India Game Developer Conference on applying design patterns to game code." },
     { year: "2015", title: "Diploma in Embedded C / C++", place: "Bangalore", details: "Embedded C and C++ programming, 2014–2015." },
     { year: "2014", title: "B.E., Electronics and Telecommunication", place: "Shivaji University (Bharati Vidyapeeth College of Engineering, Kolhapur)", details: "Bachelor of Engineering, graduated 2014." },
   ],

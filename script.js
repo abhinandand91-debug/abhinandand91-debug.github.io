@@ -145,6 +145,13 @@
     </div>`).join("") + `
     <div class="tl next reveal"><div class="tl-badge" title="Next">${ICON("plus", 26)}</div><div class="tl-date">???</div><h4>New Project?</h4><a href="#contact">HIRE ME ↗</a></div>`;
 
+  /* ── talks ── */
+  $("#talks").innerHTML = (C.talks || []).map((t) => `
+    <article class="talk reveal">
+      <div class="talk-ico">${ICON(t.icon || "mic", 28)}</div>
+      <div><p class="talk-kind">${esc(t.kind)} · ${esc(t.year)}</p><h4>${esc(t.title)}</h4><p class="talk-place">${esc(t.place)}</p><p>${esc(t.text)}</p></div>
+    </article>`).join("");
+
   /* ── stack ── */
   $("#stack-grid").innerHTML = Object.entries(C.stack).map(([g, items]) => `
     <div class="stack-group reveal"><h3>${esc(g)}</h3><div class="tags">${items.map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div></div>`).join("");

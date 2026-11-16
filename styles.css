@@ -243,3 +243,14 @@ h1 { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 4.6vw
   .contact-body { grid-template-columns: 1fr; }
   .contact-photo { width: 140px; }
 }
+
+/* ── speaking & teaching ── */
+.talks-title { font-family: var(--mono); font-size: 11px; letter-spacing: .15em; color: var(--accent-dim); font-weight: 400; margin: 48px 0 16px; }
+.talks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.talk { display: grid; grid-template-columns: 56px 1fr; gap: 18px; padding: 22px; border: 1px solid var(--line); background: var(--panel); }
+.talk-ico { width: 56px; height: 56px; display: grid; place-items: center; border: 1px solid var(--accent-dim); color: var(--accent); }
+.talk-kind { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; color: var(--accent); }
+.talk h4 { font-family: var(--display); font-size: 17px; margin: 6px 0 2px; line-height: 1.3; }
+.talk-place { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-bottom: 8px; }
+.talk p:last-child { color: #aab6bf; font-size: 14px; }
+@media (max-width: 760px) { .talks { grid-template-columns: 1fr; } }

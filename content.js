@@ -218,8 +218,8 @@ window.CONTENT = {
 
   // "With the blessings of": circular portraits shown above the footer. Add files to assets/ and fill in.
   blessings: [
-    // { name: "Name", img: "assets/blessing-1.jpg" },
-    // { name: "Name", img: "assets/blessing-2.jpg" },
+    { name: "", img: "assets/blessing-1.jpg" },
+    { name: "", img: "assets/blessing-2.jpg" },
   ],
 
   // Talks and teaching given to other game developers and students

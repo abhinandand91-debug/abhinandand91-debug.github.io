@@ -140,32 +140,32 @@ window.CONTENT = {
       links: [], // TODO: Asset Store link once live
     },
     {
-      title: "Unity Perf Monitor", icon: "chart", dir: "tools", source: "github",
+      title: "Unity Perf Monitor", img: "assets/cover-perfmonitor.jpg", icon: "chart", dir: "tools", source: "github",
       text: "An in-game performance overlay that names the bottleneck (GPU, main thread, render thread, memory) and fails CI when a build gets slower.",
       tags: ["Unity", "C#", "Profiling", "CI"],
       links: [{ label: "GITHUB", href: GH + "unity-perf-monitor" }],
     },
     {
-      title: "LiveOpsKit", icon: "clock", dir: "tools", source: "github",
+      title: "LiveOpsKit", img: "assets/cover-liveopskit.jpg", imgPos: "left top", icon: "clock", dir: "tools", source: "github",
       text: "Unity Editor tools that stop LiveOps and release mistakes: a pre-build release checker, a LiveOps config validator and a time-travel clock.",
       tags: ["Unity", "C#", "Editor tools", "UPM"],
       links: [{ label: "GITHUB", href: GH + "LiveOpsKit" }],
     },
     {
-      title: "AddrKit", icon: "box", dir: "tools", source: "github",
+      title: "AddrKit", img: "assets/cover-addrkit.jpg", icon: "box", dir: "tools", source: "github",
       text: "A friendly toolkit on top of Unity Addressables: one-line loading, owner-based auto release, generated keys, folder rules, an analyzer and debug tools.",
       tags: ["Unity", "C#", "Addressables", "UPM"],
       links: [{ label: "GITHUB", href: GH + "AddrKit" }],
     },
     {
-      title: "Serialized Field Guard", icon: "shield", dir: "tools", source: "private",
+      title: "Serialized Field Guard", img: "assets/cover-sfg.jpg", icon: "shield", dir: "tools", source: "private",
       text: "Detects renamed serialized fields, counts the assets they would break, adds FormerlySerializedAs automatically and ships a git pre-commit hook.",
       tags: ["Unity", "C#", "Editor tools", "Git"],
     },
 
     // ── More games and prototypes ──
     {
-      title: "Slot Machines (3×5 and 3×3)", icon: "cherry", dir: "games", source: "github",
+      title: "Slot Machines (3×5 and 3×3)", img: "assets/cover-slots.jpg", icon: "cherry", dir: "games", source: "github",
       text: "Classic 20-payline slot machines in Unity 6 with clean, SOLID C#, code-generated placeholder art and sound, and tests. Also ported to Cocos Creator 3.8 in TypeScript.",
       tags: ["Unity", "C#", "Cocos Creator", "TypeScript", "Tests"],
       links: [
@@ -174,18 +174,18 @@ window.CONTENT = {
       ],
     },
     {
-      title: "1947", icon: "rocket", dir: "games", source: "github",
+      title: "1947", img: "assets/cover-1947.jpg", icon: "rocket", dir: "games", source: "github",
       text: "A 2D vertical space shooter built with Unity.",
       tags: ["Unity", "C#", "2D"],
       links: [{ label: "GITHUB", href: GH + "1947Game" }],
     },
     {
-      title: "ToneBlaster", icon: "music", dir: "prototypes", source: "private",
+      title: "ToneBlaster", img: "assets/cover-toneblaster.jpg", imgPos: "center bottom", icon: "music", dir: "prototypes", source: "private",
       text: "A voice-controlled artillery prototype: players hum musical notes to aim and fire. Each note maps to a ground zone, and damage depends on landing precision.",
       tags: ["Unity", "C#", "Audio", "Pitch detection"],
     },
     {
-      title: "The Last Light", icon: "flame", dir: "prototypes", source: "private",
+      title: "The Last Light", img: "assets/cover-lastlight.jpg", imgPos: "center top", icon: "flame", dir: "prototypes", source: "private",
       text: "Colony Memory: a vertical slice built in Unity.", // TODO: one more sentence on the genre and what you built
       tags: ["Unity", "C#"],
     },

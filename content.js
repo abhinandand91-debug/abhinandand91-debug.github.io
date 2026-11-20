@@ -130,10 +130,11 @@ window.CONTENT = {
     // ── Tools ──
     {
       title: "Frame Guru", dir: "tools", source: "itch", img: "assets/frameguru.jpg",
-      text: "Finds out why a Unity game drops frames on a real Android phone. It explains each FPS drop, tunes settings live with no rebuild, and measures which fix is worth the most frames on that device. Available now on itch.io; Unity Asset Store release in review.",
+      text: "Finds out why a Unity game drops frames on a real Android phone. It explains each FPS drop, tunes settings live with no rebuild, and measures which fix is worth the most frames on that device. Available now on itch.io and Gumroad; Unity Asset Store release in review.",
       tags: ["Unity", "C#", "Android", "Profiling", "Editor tools"],
       links: [
         { label: "GET IT ON ITCH", href: "https://xstonecold.itch.io/frame-guru" },
+        { label: "GUMROAD", href: "https://abhinand51.gumroad.com/l/frameguru" },
         { label: "VIDEO", href: "https://youtu.be/M_AuV-AxGtE" },
       ], // TODO: add the Asset Store link once live
     },
@@ -207,7 +208,7 @@ window.CONTENT = {
     { from: "12.2025", to: "07.2026", company: "Agapi", icon: "cherry", role: "Senior Game Developer", place: "Dubai, UAE",
       points: ["Slot game from concept to release", "Cocos Creator + TypeScript"] },
     { from: "2026", to: "PRESENT", company: "Independent", icon: "rocket", role: "Agentic-first games & Unity tools", place: "Remote",
-      points: ["6 games on itch.io", "Frame Guru: Unity performance tool, on sale on itch.io"] },
+      points: ["6 games on itch.io", "Frame Guru: Unity performance tool, on sale on itch.io and Gumroad"] },
   ],
 
   stack: {

@@ -15,7 +15,10 @@
   if (C.location) $("#hero-loc").textContent = `LOC: ${C.location.toUpperCase()}`;
   $("#stats").innerHTML = (C.stats || []).map((s) => `<div class="stat"><b>${esc(s.n)}</b><span>${esc(s.l)}</span></div>`).join("");
   $("#foot").textContent = `© ${new Date().getFullYear()} ${C.name.toUpperCase()}`;
-  document.querySelectorAll(".cv-link").forEach((a) => (a.href = C.cv));
+  document.querySelectorAll(".cv-link").forEach((a) => {
+    a.href = C.cv;
+    a.download = C.name.replace(/\s+/g, "_") + "_Resume.pdf"; // saved name, e.g. Abhinandan_Dharmadhikari_Resume.pdf
+  });
   if (C.photo) ["#hero-photo", "#contact-photo"].forEach((id) => {
     const f = $(id), img = f.querySelector("img");
     img.src = C.photo; img.alt = C.name;
